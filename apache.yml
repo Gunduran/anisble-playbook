@@ -4,11 +4,11 @@
   gather_facts: false
   tasks:
     - name: 'Install APache Webserver'
-      package:
+      ansible.builtin.package:
         name: 'httpd'
         state: 'present'
     - name: 'Start and enable web server'
-      service:
+      ansible.builtin.service:
         name: 'httpd'
         state: 'started'
         enabled: true
